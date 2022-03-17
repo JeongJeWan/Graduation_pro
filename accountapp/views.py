@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseForbidden
 from django.shortcuts import render
 
 
@@ -16,6 +16,7 @@ from accountapp.models import HelloWorld
 
 
 has_ownership = [account_ownership_required, login_required]
+
 
 @login_required
 def hello_world(request):
@@ -64,3 +65,9 @@ class AccountDeleteView(DeleteView):
     context_object_name = 'target_user'
     success_url = reverse_lazy('accountapp:login')
     template_name = 'accountapp/delete.html'
+
+
+
+
+
+
