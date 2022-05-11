@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'projectapp',
     'subscribeapp',
     'mapapp',
+    'calendarapp',
 ]
 
 MIDDLEWARE = [
