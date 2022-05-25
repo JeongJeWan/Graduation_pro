@@ -19,9 +19,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 from articleapp.views import ArticleListView
+from mapapp.views import MapListView
 
 urlpatterns = [
-    path('', ArticleListView.as_view(), name='home'),
+    path('', MapListView.as_view(), name='home'),
 
     path('admin/', admin.site.urls),
     path('accounts/', include('accountapp.urls')),
@@ -32,5 +33,6 @@ urlpatterns = [
     path('subscribe/', include('subscribeapp.urls')),
     path('maps/', include('mapapp.urls')),
     path('calendars/', include('calendarapp.urls')),
+    path('videos/', include('videoapp.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

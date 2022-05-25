@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'subscribeapp',
     'mapapp',
     'calendarapp',
+    'videoapp',
 ]
 
 MIDDLEWARE = [
